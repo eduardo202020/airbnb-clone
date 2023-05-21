@@ -43,7 +43,7 @@ const UserMenu = ({ currentUser }: Props) => {
             hidden md:block
         "
           >
-            <Avatar />
+            <Avatar src={currentUser?.image} />
           </div>
         </div>
       </div>
