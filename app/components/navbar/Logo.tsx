@@ -11,6 +11,7 @@ const Logo = (props: Props) => {
   const router = useRouter();
   return (
     <Image
+      onClick={() => router.push("/")}
       alt="logo"
       className="hidden md:block cursor-pointer w-auto"
       height="100"

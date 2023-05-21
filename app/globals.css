@@ -7,3 +7,21 @@ body,
 :root {
   height: 100%;
 }
+
+/* @layer utilities { */
+/* Chrome, Safari and Opera */
+/* .no-scrollbar::-webkit-scrollbar { */
+/* } */
+/* } */
+
+@layer base {
+  ::-webkit-scrollbar-thumb {
+    @apply bg-transparent shadow-sm;
+  }
+  ::-webkit-scrollbar {
+    @apply w-4 h-[6px] bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-lg bg-rose-500 cursor-pointer w-[2px] /*color trackbar*/;
+  }
+}
