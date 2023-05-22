@@ -7,6 +7,8 @@ import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
 import useRegisterModal from "@/app/hooks/useRegisterModal";
+import useLoginModal from "@/app/hooks/useLoginModal";
+
 import Modal from "./Modal";
 import Heading from "../Heading";
 import Input from "../inputs/Input";
@@ -18,6 +20,7 @@ type Props = {};
 
 const RegisterModal = (props: Props) => {
   const registerModal = useRegisterModal();
+  const loginModal = useLoginModal();
   const [isLoading, setIsLoading] = useState(false);
 
   const {
@@ -98,7 +101,10 @@ const RegisterModal = (props: Props) => {
         <div className="flex flex-row justify-center items-center gap-2">
           <div>Already have an account?</div>
           <div
-            onClick={() => {}}
+            onClick={() => {
+              registerModal.onClose();
+              loginModal.onOpen();
+            }}
             className="text-neutral-800 cursor-pointer hover:underline"
           >
             Log in
