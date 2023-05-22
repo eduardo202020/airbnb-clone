@@ -9,17 +9,19 @@ import Heading from "../Heading";
 
 import { categories } from "../navbar/Categories";
 import CategoryInput from "../inputs/CategoryInput";
+import CountrySelect from "../inputs/CountrySelect";
+import dynamic from "next/dynamic";
 
 type Props = {};
 
 enum STEPS {
   CATEGORY = 0,
-  LOCATION = 2,
+  LOCATION = 1,
+  INFO = 2,
   IMAGES = 3,
   DESCRIPTION = 4,
   PRICE = 5,
 }
-
 const RentModal = (props: Props) => {
   const rentModal = useRentModal();
 
@@ -47,6 +49,12 @@ const RentModal = (props: Props) => {
   });
 
   const category = watch("category");
+  const location = watch("location");
+
+  const Map = useMemo(
+    () => dynamic(() => import("../Map"), { ssr: false }),
+    [location]
+  );
 
   const setCustomValue = (id: string, value: any) => {
     setValue(id, value, {
@@ -101,12 +109,29 @@ const RentModal = (props: Props) => {
     </div>
   );
 
+  if (step === STEPS.LOCATION) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading
+          title="Where is your place located"
+          subtitle="Help guests find you"
+        />
+        <CountrySelect
+          value={location}
+          onChange={(value) => setCustomValue("location", value)}
+        />
+
+        <Map center={location?.latlng} />
+      </div>
+    );
+  }
+
   return (
     <Modal
       title="Airbnb your home!"
       isOpen={rentModal.isOpen}
       onClose={rentModal.onClose}
-      onSubmit={rentModal.onClose}
+      onSubmit={onNext}
       actionLabel={actionLabel}
       secondaryActionLabel={secondaryActionLabel}
       secondaryAction={step === STEPS.CATEGORY ? undefined : onBack}
