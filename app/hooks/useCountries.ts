@@ -1,4 +1,3 @@
-import { isTemplateExpression } from "typescript";
 import countries from "world-countries";
 
 const formattedCountries = countries.map((country) => ({

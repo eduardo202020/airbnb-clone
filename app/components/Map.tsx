@@ -24,7 +24,7 @@ function Map({ center }: Props) {
     <MapContainer
       center={(center as L.LatLngExpression) || [-11.888799, -77.071063]}
       zoom={center ? 4 : 2}
-      scrollWheelZoom={false}
+      scrollWheelZoom={true}
       className="h-[35vh] rounded-lg"
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
