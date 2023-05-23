@@ -31,7 +31,8 @@ const ListingCard = ({
 }: Props) => {
   const router = useRouter();
 
-  // ya que el objeto data solo contiene la lacation info, se debe acceder a la lista de paises para obtener la info del pais completo
+  // ya que el objeto data solo contiene la lacation info,
+  //  se debe acceder a la lista de paises para obtener la info del pais completo
   const { getByValue } = useCountries();
   const location = getByValue(data.locationValue);
 
