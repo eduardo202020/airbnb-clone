@@ -22,7 +22,9 @@ const initialDateRange = {
 };
 
 type Props = {
-  reservations?: Reservation[];
+  reservations?: (Reservation & {
+    listing: Listing;
+  })[];
   listing: Listing & {
     user: User;
   };
