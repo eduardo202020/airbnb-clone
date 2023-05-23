@@ -71,8 +71,7 @@ const ListingClient = ({ currentUser, listing, reservations = [] }: Props) => {
       .then(() => {
         toast.success("Listing reserved!");
         setDataRange(initialDateRange);
-        // redirect to /trips
-        router.refresh();
+        router.push("/trips");
       })
       .catch(() => {
         toast.error("Something went wrong.");
