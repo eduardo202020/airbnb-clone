@@ -64,15 +64,28 @@ const UserMenu = ({ currentUser }: Props) => {
             {currentUser ? (
               <>
                 <MenuItem
-                  onClick={() => router.push("/trips")}
+                  onClick={() => {
+                    router.push("/trips");
+                    setIsOpen((value) => !value);
+                  }}
                   label="My trips"
                 />
                 <MenuItem onClick={() => {}} label="My favorites" />
-                <MenuItem onClick={() => {}} label="My reservations" />
+                <MenuItem
+                  onClick={() => {
+                    router.push("/reservations");
+                    setIsOpen((value) => !value);
+                  }}
+                  label="My reservations"
+                />
                 <MenuItem onClick={() => {}} label="My properties" />
                 <MenuItem onClick={rentModal.onOpen} label="Airbnb my home" />
                 <hr />
-                <MenuItem onClick={signOut} label="Logout" />
+                <MenuItem onClick={()=>
+                  {
+                    signOut()
+                    setIsOpen((value) => !value);
+                    }} label="Logout" />
               </>
             ) : (
               <>
