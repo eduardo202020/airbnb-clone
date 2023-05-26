@@ -63,6 +63,21 @@ const UserMenu = ({ currentUser }: Props) => {
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
+                <div
+                  className="flex flex-row  hover:bg-neutral-100 transition font-semibold py-2"
+                  onClick={() => {
+                    router.push("/");
+                    setIsOpen((value) => !value);
+                  }}
+                >
+                  <div className="sm:px-4 flex flex-row gap-2 justify-center items-center sm:justify-between  w-full">
+                    <div className="sm:hidden">
+                      <Avatar src={currentUser.image} />
+                    </div>
+                    <p>{currentUser.name}</p>
+                  </div>
+                </div>
+                <hr />
                 <MenuItem
                   onClick={() => {
                     router.push("/trips");
