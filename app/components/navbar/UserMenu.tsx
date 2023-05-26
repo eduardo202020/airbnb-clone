@@ -70,11 +70,11 @@ const UserMenu = ({ currentUser }: Props) => {
                     setIsOpen((value) => !value);
                   }}
                 >
-                  <div className="sm:px-4 flex flex-row gap-2 justify-center items-center sm:justify-between  w-full">
-                    <div className="sm:hidden">
+                  <div className="pl-4 flex flex-row gap-2 items-center sm:justify-between  w-full">
+                    <div className="md:hidden">
                       <Avatar src={currentUser.image} />
                     </div>
-                    <p>{currentUser.name}</p>
+                    <p>{currentUser.name?.split(" ").shift()}</p>
                   </div>
                 </div>
                 <hr />
