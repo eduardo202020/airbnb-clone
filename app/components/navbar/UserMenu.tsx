@@ -42,7 +42,7 @@ const UserMenu = ({ currentUser }: Props) => {
           onClick={onRent}
           className="hidden md:block text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 cursor-pointer"
         >
-          Airbnb your home
+          Publica tu anuncio
         </div>
         <div
           className="p-4 md:py-1 md:px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition"
@@ -106,7 +106,10 @@ const UserMenu = ({ currentUser }: Props) => {
                   }}
                   label="My properties"
                 />
-                <MenuItem onClick={rentModal.onOpen} label="Airbnb my home" />
+                <MenuItem
+                  onClick={rentModal.onOpen}
+                  label="Publica tu anuncio"
+                />
                 <hr />
                 <MenuItem
                   onClick={() => {

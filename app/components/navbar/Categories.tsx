@@ -2,21 +2,22 @@
 
 import Container from "../Container";
 
-import { TbBeach, TbMountain, TbPool } from "react-icons/tb";
-import {
-  GiBarn,
-  GiBoatFishing,
-  GiCactus,
-  GiCastle,
-  GiCaveEntrance,
-  GiForestCamp,
-  GiIsland,
-  GiWindmill,
-} from "react-icons/gi";
-import { FaSkiing } from "react-icons/fa";
-import { BsSnow } from "react-icons/bs";
-import { IoDiamond } from "react-icons/io5";
-import { MdOutlineVilla } from "react-icons/md";
+import { GiCook } from "react-icons/gi";
+import { FaFish, FaTools } from "react-icons/fa";
+import { TiCamera, TiShoppingCart } from "react-icons/ti";
+import { GiHealthNormal } from "react-icons/gi";
+
+import { GiClothes } from "react-icons/gi";
+import { AiFillCar } from "react-icons/ai";
+
+import { BiStore } from "react-icons/bi";
+
+import { SiCounterstrike, SiTiktok } from "react-icons/si";
+import { CgToolbox } from "react-icons/cg";
+import { SlGraduation } from "react-icons/sl";
+import { VscJersey, VscSaveAs, VscSymbolColor } from "react-icons/vsc";
+
+import { MdCleaningServices } from "react-icons/md";
 
 import CategoryBox from "../CategoryBox";
 import { usePathname, useSearchParams } from "next/navigation";
@@ -25,78 +26,78 @@ type Props = {};
 
 export const categories = [
   {
-    label: "Beach",
-    icon: TbBeach,
+    label: "Ropa",
+    icon: GiClothes,
     description: "This property is close to the beach!",
   },
   {
-    label: "Windmills",
-    icon: GiWindmill,
+    label: "Pesca",
+    icon: FaFish,
     description: "This property is has windmills!",
   },
   {
-    label: "Modern",
-    icon: MdOutlineVilla,
+    label: "Mecanica",
+    icon: FaTools,
     description: "This property is modern!",
   },
   {
-    label: "Countryside",
-    icon: TbMountain,
+    label: "Salud",
+    icon: GiHealthNormal,
     description: "This property is in the countryside!",
   },
   {
-    label: "Pools",
-    icon: TbPool,
+    label: "Cocina",
+    icon: GiCook,
     description: "This is property has a beautiful pool!",
   },
   {
-    label: "Islands",
-    icon: GiIsland,
+    label: "Limipieza",
+    icon: MdCleaningServices,
     description: "This property is on an island!",
   },
   {
-    label: "Lake",
-    icon: GiBoatFishing,
+    label: "Tienda",
+    icon: BiStore,
     description: "This property is near a lake!",
   },
   {
-    label: "Skiing",
-    icon: FaSkiing,
+    label: "Conducción",
+    icon: AiFillCar,
     description: "This property has skiing activies!",
   },
   {
-    label: "Castles",
-    icon: GiCastle,
+    label: "Social",
+    icon: SiTiktok,
     description: "This property is an ancient castle!",
   },
   {
-    label: "Caves",
-    icon: GiCaveEntrance,
+    label: "Enseñanza",
+    icon: SlGraduation,
     description: "This property is in a spooky cave!",
   },
   {
-    label: "Camping",
-    icon: GiForestCamp,
+    label: "Seguridad",
+    icon: SiCounterstrike,
     description: "This property offers camping activities!",
   },
   {
-    label: "Arctic",
-    icon: BsSnow,
+    label: "Ventas",
+    icon: TiShoppingCart,
     description: "This property is in arctic environment!",
   },
   {
-    label: "Desert",
-    icon: GiCactus,
+    label: "Filmacion",
+    icon: TiCamera,
     description: "This property is in the desert!",
   },
   {
-    label: "Barns",
-    icon: GiBarn,
+    label: "Arte",
+    icon: VscSymbolColor,
     description: "This property is in a barn!",
   },
   {
-    label: "Lux",
-    icon: IoDiamond,
+    label: "Oficina",
+    icon: CgToolbox,
     description: "This property is brand new and luxurious!",
   },
 ];
@@ -116,7 +117,7 @@ const Categories = (props: Props) => {
     <Container>
       <div
         className="
-        pt-4 flex items-center justify-between overflow-x-auto no-scrollbar
+        pt-4 flex items-center justify-between overflow-x-auto no-scrollbar pb-2
       "
       >
         {categories.map((item) => (

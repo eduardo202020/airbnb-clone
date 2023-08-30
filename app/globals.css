@@ -22,7 +22,7 @@ body,
     @apply w-[6px] h-[6px] bg-transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply rounded-lg bg-rose-500 cursor-pointer w-[2px] /*color trackbar*/;
+    @apply rounded-lg bg-[#5271FF] cursor-pointer w-[2px] /*color trackbar*/;
   }
 }
 

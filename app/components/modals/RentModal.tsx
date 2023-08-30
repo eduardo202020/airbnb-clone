@@ -265,7 +265,7 @@ const RentModal = (props: Props) => {
 
   return (
     <Modal
-      title="Airbnb your home!"
+      title="Publica tu anuncio!"
       isOpen={rentModal.isOpen}
       onClose={rentModal.onClose}
       onSubmit={handleSubmit(onSubmit)}

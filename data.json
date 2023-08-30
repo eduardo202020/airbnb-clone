@@ -1,0 +1,174 @@
+[
+  {
+    "name": "Ancon",
+    "coordenadas": [-11.7736, -77.1761]
+  },
+  {
+    "name": "Ate",
+    "coordenadas": [-12.0261, -76.9192]
+  },
+  {
+    "name": "Barranco",
+    "coordenadas": [-12.1492, -77.0217]
+  },
+  {
+    "name": "Breña",
+    "coordenadas": [-12.0569, -77.0536]
+  },
+  {
+    "name": "Carabayllo",
+    "coordenadas": [-11.89, -77.0269]
+  },
+  {
+    "name": "Chaclacayo",
+    "coordenadas": [-11.9756, -76.7692]
+  },
+  {
+    "name": "Chorrillos",
+    "coordenadas": [-12.1692, -77.0244]
+  },
+  {
+    "name": "Cieneguilla",
+    "coordenadas": [-12.1206, -76.8144]
+  },
+  {
+    "name": "Comas",
+    "coordenadas": [-11.9575, -77.0492]
+  },
+  {
+    "name": "El Agustino",
+    "coordenadas": [-12.0483, -76.9833]
+  },
+  {
+    "name": "Independencia",
+    "coordenadas": [-11.9969, -77.0544]
+  },
+  {
+    "name": "Jesus Maria",
+    "coordenadas": [-12.07, -77.0453]
+  },
+  {
+    "name": "La Molina",
+    "coordenadas": [-12.0789, -76.9169]
+  },
+  {
+    "name": "La Victoria",
+    "coordenadas": [-12.0653, -77.0311]
+  },
+  {
+    "name": "Lima",
+    "coordenadas": [-12.0453, -77.0311]
+  },
+  {
+    "name": "Lince",
+    "coordenadas": [-12.0833, -77.0317]
+  },
+  {
+    "name": "Los Olivos",
+    "coordenadas": [-11.9917, -77.0706]
+  },
+  {
+    "name": "Lurigancho",
+    "coordenadas": [-11.9358, -76.6972]
+  },
+  {
+    "name": "Lurin",
+    "coordenadas": [-12.2736, -76.8694]
+  },
+  {
+    "name": "Magdalena del Mar",
+    "coordenadas": [-12.0917, -77.0669]
+  },
+  {
+    "name": "Miraflores",
+    "coordenadas": [-12.1219, -77.0297]
+  },
+  {
+    "name": "Pachacamac",
+    "coordenadas": [-12.2294, -76.8594]
+  },
+  {
+    "name": "Pucusana",
+    "coordenadas": [-12.4817, -76.7975]
+  },
+  {
+    "name": "Pueblo Libre",
+    "coordenadas": [-12.0783, -77.0625]
+  },
+  {
+    "name": "Puente Piedra",
+    "coordenadas": [-11.8667, -77.0769]
+  },
+  {
+    "name": "Punta Hermosa",
+    "coordenadas": [-12.3375, -76.8264]
+  },
+  {
+    "name": "Punta Negra",
+    "coordenadas": [-12.3653, -76.7956]
+  },
+  {
+    "name": "Rimac",
+    "coordenadas": [-12.0422, -77.0267]
+  },
+  {
+    "name": "San Bartolo",
+    "coordenadas": [-12.3894, -76.7803]
+  },
+  {
+    "name": "San Borja",
+    "coordenadas": [-12.1072, -76.9992]
+  },
+  {
+    "name": "San Isidro",
+    "coordenadas": [-12.0989, -77.0347]
+  },
+  {
+    "name": "San Juan de Lurigancho",
+    "coordenadas": [-12.0294, -77.0103]
+  },
+  {
+    "name": "San Juan de Miraflores",
+    "coordenadas": [-12.1633, -76.9636]
+  },
+  {
+    "name": "San Luis",
+    "coordenadas": [-12.0758, -76.9933]
+  },
+  {
+    "name": "San Martin de Porres",
+    "coordenadas": [-12.0303, -77.0572]
+  },
+  {
+    "name": "San Miguel",
+    "coordenadas": [-12.0908, -77.0839]
+  },
+  {
+    "name": "Santa Anita",
+    "coordenadas": [-12.0436, -76.9714]
+  },
+  {
+    "name": "Santa Maria Del Mar",
+    "coordenadas": [-12.4025, -76.7742]
+  },
+  {
+    "name": "Santa Rosa",
+    "coordenadas": [-11.7967, -77.1728]
+  },
+  {
+    "name": "Santiago de Surco",
+    "coordenadas": [-12.1464, -77.0067]
+  },
+  {
+    "name": "Surquillo",
+    "coordenadas": [-12.1186, -77.0217]
+  },
+  {
+    "name": "Villa El Salvador",
+    "coordenadas": [-12.2125, -76.9369]
+  },
+  {
+    "name": "Villa Maria Del Triunfo",
+    "coordenadas": [-12.1622, -76.9436]
+  }
+]

@@ -23,7 +23,7 @@ function Map({ center }: Props) {
   return (
     <MapContainer
       center={(center as L.LatLngExpression) || [-11.888799, -77.071063]}
-      zoom={center ? 4 : 2}
+      zoom={center ? 12 : 4}
       scrollWheelZoom={true}
       className="h-[35vh] rounded-lg"
     >

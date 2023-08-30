@@ -26,7 +26,7 @@ const Search = (props: Props) => {
     if (locationValue) {
       return getByValue(locationValue as string)?.label;
     }
-    return "Anywhere";
+    return "Cualquier Lugar";
   }, [getByValue, locationValue]);
 
   const durationLabel = useMemo(() => {
@@ -39,7 +39,7 @@ const Search = (props: Props) => {
       }
       return `${diff} Days`;
     }
-    return "Any Week";
+    return "Cualquier Fecha";
   }, [endDate, startDate]);
 
   const guestsLabel = useMemo(() => {
@@ -62,8 +62,8 @@ const Search = (props: Props) => {
           {durationLabel}
         </div>
         <div className="text-sm pl-6 pr-2 text-gray-600 flex flex-row items-center gap-3">
-          <div className="hidden sm:block">{guestsLabel}</div>
-          <div className="p-2 bg-rose-500 rounded-full text-white ">
+          {/* <div className="hidden sm:block">{guestsLabel}</div> */}
+          <div className="p-2 bg-[#5271FF]  rounded-full text-white ">
             <BiSearch size={18} />
           </div>
         </div>

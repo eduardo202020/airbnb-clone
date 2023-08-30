@@ -3,6 +3,7 @@
 import Select from "react-select";
 
 import useCountries from "@/app/hooks/useCountries";
+import { distritos } from "@/distritos";
 
 type Props = {
   value?: CountrySelectValue;
@@ -18,21 +19,21 @@ export interface CountrySelectValue {
 }
 
 const CountrySelect = ({ onChange, value }: Props) => {
-  const { getAll } = useCountries();
+  // const { getAll } = useCountries();
 
   return (
     <div>
       <Select
         placeholder="Anywhere"
         isClearable
-        options={getAll()}
+        options={distritos}
         value={value}
         onChange={(value) => onChange(value as CountrySelectValue)}
         formatOptionLabel={(option: any) => (
           <div className="flex flex-row items-center gap-3">
             <div>{option.flag}</div>
             <div>
-              {option.label},{" "}
+              {option.label}
               <span className="text-neutral-500 ml-1"> {option.region}</span>
             </div>
           </div>
