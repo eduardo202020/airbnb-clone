@@ -90,12 +90,14 @@ const ListingCard = ({
             <HeartButton listingId={data.id} currentUser={currentUser} />
           </div>
         </div>
-        <div className="flex flex-row  font-semibold text-lg">
-          <FaMapMarkerAlt size={25} color="#5271FF" />
-          <p> {location?.label}</p>
+        <div className="flex flex-row  font-semibold text-lg text-neutral-500">
+          <FaMapMarkerAlt size={22} color="#5271FF" />
+          <p className="ml-2"> {location?.label}</p>
         </div>
-        <div className="font-light text-xl text-neutral-500">
-          {reservationDate || data.category}
+        <div className=" text-lg ">
+          <p className="font-bold hover:text-[#5271FF] transition-all duration-100 ease-in-out">
+            {data.title}
+          </p>
         </div>
         <div className="flex flex-row items-center gap-1">
           {/* <div className="font-semibold">$ {price}</div> */}

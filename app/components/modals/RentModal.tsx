@@ -18,6 +18,8 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
+import { CulqiProvider, useCheckout, UseCulqiPropsV4 } from "react-culqi-next";
+
 type Props = {};
 
 enum STEPS {
@@ -27,6 +29,7 @@ enum STEPS {
   IMAGES = 2,
   DESCRIPTION = 3,
   PRICE = 4,
+  FIN = 5,
 }
 const RentModal = (props: Props) => {
   const rentModal = useRentModal();
@@ -87,7 +90,7 @@ const RentModal = (props: Props) => {
   // funcion submit
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    if (step !== STEPS.PRICE) {
+    if (step !== STEPS.FIN) {
       return onNext();
     }
 
@@ -111,7 +114,7 @@ const RentModal = (props: Props) => {
   };
 
   const actionLabel = useMemo(() => {
-    if (step === STEPS.PRICE) {
+    if (step === STEPS.FIN) {
       return "Crear";
     }
 
@@ -202,6 +205,62 @@ const RentModal = (props: Props) => {
   //   );
   // }
 
+  const MyButton = () => {
+    const [amount, setAmount] = useState(10000);
+    const [title, setTitle] = useState("White T-shirt");
+
+    const { openCulqi, token, error } = useCheckout({
+      settings: {
+        title: title,
+        currency: "PEN",
+        amount: amount,
+        //optional
+        options: {
+          lang: "auto",
+          installments: false,
+          paymentMethods: {
+            tarjeta: false,
+            yape: true,
+          },
+          style: {
+            logo: "",
+            bannerColor: "",
+            buttonBackground: "",
+            buttonText: "",
+            buttonTextColor: "",
+            linksColor: "",
+            menuColor: "",
+            priceColor: "",
+          },
+        },
+      },
+      onClose: () => {
+        console.log("Handle the closing of the modal");
+        console.log({ globalThis });
+        // globalThis.Culqi.onclose();
+      },
+      onToken: (token) => {
+        console.log("Send your token to the backend", token);
+        // handleSubmit(onSubmit);
+        // router.push("/");
+
+        // globalThis.Culqi.
+
+        // Culqi.close();
+      },
+      onError: (error) => {
+        console.log("handle the errors", error);
+      },
+    });
+
+    return (
+      <>
+        {/* <button onClick={openCulqi}>Pay now</button> */}
+        {openCulqi()}
+      </>
+    );
+  };
+
   if (step === STEPS.IMAGES) {
     bodyContent = (
       <div className=" flex flex-col gap-8">
@@ -263,6 +322,16 @@ const RentModal = (props: Props) => {
           required
         />
       </div>
+    );
+  }
+
+  if (step === STEPS.FIN) {
+    bodyContent = (
+      <>
+        <CulqiProvider publicKey="pk_test_6fHVu257xmONLDas">
+          <MyButton />
+        </CulqiProvider>
+      </>
     );
   }
 
