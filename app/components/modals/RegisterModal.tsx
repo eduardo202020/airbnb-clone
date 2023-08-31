@@ -55,7 +55,7 @@ const RegisterModal = (props: Props) => {
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
-      <Heading title="Welcome to Airbnb" subtitle="Create an account!" />
+      <Heading title="Bienvenido a MiChamba" subtitle="Create una cuenta!" />
       <Input
         id="email"
         label="Email"
@@ -101,7 +101,7 @@ const RegisterModal = (props: Props) => {
       />
       <div className="text-neutral-500 text-center mt-4 font-light">
         <div className="flex flex-row justify-center items-center gap-2">
-          <div>Already have an account?</div>
+          <div>Ya tiene una cuenta?</div>
           <div
             onClick={() => {
               registerModal.onClose();

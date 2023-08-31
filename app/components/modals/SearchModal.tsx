@@ -112,7 +112,7 @@ const SearchModal = (props: Props) => {
 
   const actionLabel = useMemo(() => {
     if (step === STEPS.LOCATION) {
-      return "Search";
+      return "Buscar";
     }
     return "Next";
   }, [step]);
@@ -121,15 +121,12 @@ const SearchModal = (props: Props) => {
     if (step === STEPS.LOCATION) {
       return undefined;
     }
-    return "Back";
+    return "Atrás";
   }, [step]);
 
   let bodyConteny = (
     <div className="flex flex-col gap-8">
-      <Heading
-        title="Where do you wanna go?"
-        subtitle="Find your perfect location!"
-      />
+      <Heading title="En Dónde quire buscar?" subtitle="Busque dónde quirea" />
       <CountrySelect
         value={location}
         onChange={(value) => setLocation(value as CountrySelectValue)}

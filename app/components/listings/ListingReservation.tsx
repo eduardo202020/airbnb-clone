@@ -48,7 +48,7 @@ const ListingReservation = ({
         <Button disabled={disabled} label="Escribir" onClick={onSubmit} />
         <FloatingWhatsApp
           phoneNumber={"+51" + price.toString()}
-          accountName="LLamar"
+          accountName={user.name}
           chatMessage="Hola, escribeme si tienes alguna duda"
           statusMessage="Normalmente responde en una hora"
           avatar={user.image || ""}

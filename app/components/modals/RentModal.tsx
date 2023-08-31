@@ -112,23 +112,23 @@ const RentModal = (props: Props) => {
 
   const actionLabel = useMemo(() => {
     if (step === STEPS.PRICE) {
-      return "CREATE";
+      return "Crear";
     }
 
-    return "NEXT";
+    return "Siguiente";
   }, [step]);
 
   const secondaryActionLabel = useMemo(() => {
     if (step === STEPS.CATEGORY) {
       return undefined;
     }
-    return "Back";
+    return "Atrás";
   }, [step]);
 
   let bodyContent = (
     <div className="flex flex-col gap-6">
       <Heading
-        title="Which of these best describes your place"
+        title="Cuál de estos describe mejor tu anuncio?"
         subtitle="Pick a category"
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto">

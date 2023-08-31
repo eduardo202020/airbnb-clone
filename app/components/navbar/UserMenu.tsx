@@ -78,33 +78,33 @@ const UserMenu = ({ currentUser }: Props) => {
                   </div>
                 </div>
                 <hr />
-                <MenuItem
+                {/* <MenuItem
                   onClick={() => {
                     router.push("/trips");
                     setIsOpen((value) => !value);
                   }}
                   label="My trips"
-                />
+                /> */}
                 <MenuItem
                   onClick={() => {
                     router.push("/favorites");
                     setIsOpen((value) => !value);
                   }}
-                  label="My favorites"
+                  label="Mis Favoritos"
                 />
-                <MenuItem
+                {/* <MenuItem
                   onClick={() => {
                     router.push("/reservations");
                     setIsOpen((value) => !value);
                   }}
                   label="My reservations"
-                />
+                /> */}
                 <MenuItem
                   onClick={() => {
                     router.push("/properties");
                     setIsOpen((value) => !value);
                   }}
-                  label="My properties"
+                  label="Mis Publicaciones"
                 />
                 <MenuItem
                   onClick={rentModal.onOpen}
@@ -116,7 +116,7 @@ const UserMenu = ({ currentUser }: Props) => {
                     signOut();
                     setIsOpen((value) => !value);
                   }}
-                  label="Logout"
+                  label="Salir"
                 />
               </>
             ) : (
