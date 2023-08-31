@@ -51,7 +51,7 @@ const ListingReservation = ({
           accountName="LLamar"
           chatMessage="Hola, escribeme si tienes alguna duda"
           statusMessage="Normalmente responde en una hora"
-          avatar={user.image}
+          avatar={user.image || ""}
         />
       </div>
     </div>
