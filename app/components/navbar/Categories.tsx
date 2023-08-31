@@ -28,77 +28,78 @@ export const categories = [
   {
     label: "Ropa",
     icon: GiClothes,
-    description: "This property is close to the beach!",
+    description: "Venta de todo tipo de ropa",
   },
   {
     label: "Pesca",
     icon: FaFish,
-    description: "This property is has windmills!",
+    description: "Trabajo de pesca artesanal e industrial",
   },
   {
     label: "Mecanica",
     icon: FaTools,
-    description: "This property is modern!",
+    description: "Mecánica de todo tipo de vehículos",
   },
   {
     label: "Salud",
     icon: GiHealthNormal,
-    description: "This property is in the countryside!",
+    description: "Todo lo relacionado con la salud de las personas y animales",
   },
   {
     label: "Cocina",
     icon: GiCook,
-    description: "This is property has a beautiful pool!",
+    description: "Gastronomía y todos sus relacionados",
   },
   {
     label: "Limipieza",
     icon: MdCleaningServices,
-    description: "This property is on an island!",
+    description: "Servicio de limpieza y todo lo relacionado",
   },
   {
     label: "Tienda",
     icon: BiStore,
-    description: "This property is near a lake!",
+    description: "Atención en tiendas para ventas",
   },
   {
     label: "Conducción",
     icon: AiFillCar,
-    description: "This property has skiing activies!",
+    description:
+      "Servicion de transporte para todo tipo de productos y/o servicios",
   },
   {
     label: "Social",
     icon: SiTiktok,
-    description: "This property is an ancient castle!",
+    description: "Publicidad y Marketing",
   },
   {
     label: "Enseñanza",
     icon: SlGraduation,
-    description: "This property is in a spooky cave!",
+    description: "Servicio de docencia en todos sus niveles",
   },
   {
     label: "Seguridad",
     icon: SiCounterstrike,
-    description: "This property offers camping activities!",
+    description: "Servicio de seguridad en todo momento",
   },
   {
     label: "Ventas",
     icon: TiShoppingCart,
-    description: "This property is in arctic environment!",
+    description: "Especialidad en todo tipo de ventas",
   },
   {
     label: "Filmacion",
     icon: TiCamera,
-    description: "This property is in the desert!",
+    description: "Producción y edición de grabaciones de todo tipo de eventos",
   },
   {
     label: "Arte",
     icon: VscSymbolColor,
-    description: "This property is in a barn!",
+    description: "Todo tipo de forma de arte",
   },
   {
     label: "Oficina",
     icon: CgToolbox,
-    description: "This property is brand new and luxurious!",
+    description: "Servicio en oficina ",
   },
 ];
 

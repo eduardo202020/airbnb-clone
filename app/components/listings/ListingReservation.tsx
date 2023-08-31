@@ -1,10 +1,14 @@
 "use client";
-
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { Range } from "react-date-range";
 import Calendar from "../inputs/Calendar";
 import Button from "../Button";
+import { User } from "@prisma/client";
+
+import { AiTwotonePhone } from "react-icons/ai";
 
 type Props = {
+  user: User;
   price: number;
   totalPrice: number;
   onChangeDate: (value: Range) => void;
@@ -15,6 +19,7 @@ type Props = {
 };
 
 const ListingReservation = ({
+  user,
   dateRange,
   disabled,
   disabledDates,
@@ -26,26 +31,28 @@ const ListingReservation = ({
   return (
     <div className="bg-white rounded-xl border-[1px] border-neutral-200 overflow-hidden">
       <div className="flex flex-row items-center gap-1 p-4">
-        <div className="text-2xl font-semibold">${price}</div>
-        <div className="font-light text-neutral-600">night</div>
+        <div className="flex flex-row text-2xl font-semibold">
+          <AiTwotonePhone color="#5271FF" size={25} />
+          <p className="mx-2"> {price} </p>
+        </div>
+        <div className="font-light text-neutral-600">contacto</div>
       </div>
       <hr />
-      <Calendar
+      {/* <Calendar
         value={dateRange}
         disabledDates={disabledDates}
         onChange={(value) => onChangeDate(value.selection)}
-      />
+      /> */}
       <hr />
       <div className="p-4">
-        <Button disabled={disabled} label="Reserve" onClick={onSubmit} />
-      </div>
-      <div
-        className="
-        p-4 flex flex-row items-center justify-between font-semibold text-lg
-      "
-      >
-        <div>Total</div>
-        <div>$ {totalPrice}</div>
+        <Button disabled={disabled} label="Escribir" onClick={onSubmit} />
+        <FloatingWhatsApp
+          phoneNumber={"+51" + price.toString()}
+          accountName="LLamar"
+          chatMessage="Hola, escribeme si tienes alguna duda"
+          statusMessage="Normalmente responde en una hora"
+          avatar={user.image}
+        />
       </div>
     </div>
   );

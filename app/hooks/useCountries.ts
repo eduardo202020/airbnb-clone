@@ -13,7 +13,7 @@ const useCountries = () => {
   // const getAll = () => formattedCountries;
 
   const getByValue = (label: string) => {
-    return distritos.find((item) => item.label === label);
+    return distritos.find((item) => item.value === label);
   };
 
   return {

@@ -23,10 +23,10 @@ type Props = {};
 enum STEPS {
   CATEGORY = 0,
   LOCATION = 1,
-  INFO = 2,
-  IMAGES = 3,
-  DESCRIPTION = 4,
-  PRICE = 5,
+  // INFO = 2,
+  IMAGES = 2,
+  DESCRIPTION = 3,
+  PRICE = 4,
 }
 const RentModal = (props: Props) => {
   const rentModal = useRentModal();
@@ -50,7 +50,7 @@ const RentModal = (props: Props) => {
       roomCount: 1,
       bathroomCount: 1,
       imageSrc: "",
-      price: 1,
+      price: 9,
       title: "",
       description: "",
     },
@@ -152,8 +152,8 @@ const RentModal = (props: Props) => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Where is your place located"
-          subtitle="Help guests find you"
+          title="Dónde está tu anuncio?"
+          subtitle="Ayudanos a encontrarte"
         />
         <CountrySelect
           value={location}
@@ -165,46 +165,49 @@ const RentModal = (props: Props) => {
     );
   }
 
-  if (step === STEPS.INFO) {
-    bodyContent = (
-      <div className="flex flex-col gap-8">
-        <Heading
-          title="Share some basics about your place"
-          subtitle="What amenities do you have?"
-        />
-        <Counter
-          title="Guests"
-          subtitle="How many guests do you allow?
-        "
-          value={guestCount}
-          onChange={(value) => setCustomValue("guestCount", value)}
-        />
-        <hr />
-        <Counter
-          title="Rooms"
-          subtitle="How many rooms do you have?
-        "
-          value={roomCount}
-          onChange={(value) => setCustomValue("roomCount", value)}
-        />
-        <hr />
-        <Counter
-          title="Bathrooms"
-          subtitle="How many bathrooms do you have?
-        "
-          value={bathroomCount}
-          onChange={(value) => setCustomValue("bathroomCount", value)}
-        />
-      </div>
-    );
-  }
+  // if (step === STEPS.INFO) {
+  //   bodyContent = (
+  //     <div className="flex flex-col gap-8">
+  //       <Heading
+  //         title="Comparte un número de contacto"
+  //         subtitle="A dónde deben comunicarse?"
+  //       />
+
+  //       <Input
+  //         id="guestCount"
+  //         label="Contacto"
+  //         disabled={isLoading}
+  //         register={register}
+  //         errors={errors}
+  //         required
+  //       />
+
+  //       {/* <hr />
+  //       <Counter
+  //         title="Rooms"
+  //         subtitle="How many rooms do you have?
+  //       "
+  //         value={roomCount}
+  //         onChange={(value) => setCustomValue("roomCount", value)}
+  //       />
+  //       <hr />
+  //       <Counter
+  //         title="Bathrooms"
+  //         subtitle="How many bathrooms do you have?
+  //       "
+  //         value={bathroomCount}
+  //         onChange={(value) => setCustomValue("bathroomCount", value)}
+  //       /> */}
+  //     </div>
+  //   );
+  // }
 
   if (step === STEPS.IMAGES) {
     bodyContent = (
       <div className=" flex flex-col gap-8">
         <Heading
-          title="Add a photo of your place"
-          subtitle="Show guests what your place looks like!"
+          title="Agrega una foto de tu anuncio"
+          subtitle="Muestra una imagen del lugar"
         />
         <ImageUpload
           value={imageSrc}
@@ -218,12 +221,12 @@ const RentModal = (props: Props) => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="How would you describe your place?"
-          subtitle="Short and sweet works best!"
+          title="Como describirías tu anuncio?"
+          subtitle="Un título y una descripción"
         />
         <Input
           id="title"
-          label="Title"
+          label="Titulo"
           disabled={isLoading}
           register={register}
           errors={errors}
@@ -232,7 +235,7 @@ const RentModal = (props: Props) => {
         <hr />
         <Input
           id="description"
-          label="Description"
+          label="Descripción"
           disabled={isLoading}
           register={register}
           errors={errors}
@@ -246,12 +249,12 @@ const RentModal = (props: Props) => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Now, set your price"
-          subtitle="How much do you charge per night?"
+          title="Ahora, Un número de contacto"
+          subtitle="Por dónde quieres que te contacten?"
         />
         <Input
           id="price"
-          label="Price"
+          label="Número"
           formatPrice
           type="number"
           disabled={isLoading}

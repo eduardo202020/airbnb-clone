@@ -102,6 +102,7 @@ const ListingClient = ({ currentUser, listing, reservations = [] }: Props) => {
         setTotalPrice(listing.price);
       }
     }
+    // console.log({ listing });
   }, [dateRange.endDate, dateRange.startDate, listing.price]);
 
   const category = useMemo(() => {
@@ -131,6 +132,7 @@ const ListingClient = ({ currentUser, listing, reservations = [] }: Props) => {
             />
             <div className="order-first mb-10 md:order-last md:col-span-3">
               <ListingReservation
+                user={listing.user}
                 price={listing.price}
                 totalPrice={totalPrice}
                 onChangeDate={(value) => setDataRange(value)}

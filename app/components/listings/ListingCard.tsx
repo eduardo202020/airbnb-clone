@@ -10,6 +10,8 @@ import Image from "next/image";
 import HeartButton from "../HeartButton";
 import Button from "../Button";
 
+import { FaMapMarkerAlt } from "react-icons/fa";
+
 type Props = {
   data: Listing;
   currentUser?: User | null;
@@ -88,15 +90,16 @@ const ListingCard = ({
             <HeartButton listingId={data.id} currentUser={currentUser} />
           </div>
         </div>
-        <div className="font-semibold text-lg">
-          {location?.region} , {location?.label}
+        <div className="flex flex-row  font-semibold text-lg">
+          <FaMapMarkerAlt size={25} color="#5271FF" />
+          <p> {location?.label}</p>
         </div>
-        <div className="font-light text-neutral-500">
+        <div className="font-light text-xl text-neutral-500">
           {reservationDate || data.category}
         </div>
         <div className="flex flex-row items-center gap-1">
-          <div className="font-semibold">$ {price}</div>
-          {!reservation && <div className="font-light">night</div>}
+          {/* <div className="font-semibold">$ {price}</div> */}
+          {/* {!reservation && <div className="font-light">night</div>} */}
         </div>
         {onAction && actionLabel && (
           <Button

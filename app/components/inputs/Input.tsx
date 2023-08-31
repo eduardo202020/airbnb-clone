@@ -1,5 +1,5 @@
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
-import { BiDollar } from "react-icons/bi";
+import { AiFillPhone } from "react-icons/ai";
 
 interface Props {
   id: string;
@@ -25,7 +25,7 @@ const Input = ({
   return (
     <div className="w-full relative">
       {formatPrice && (
-        <BiDollar
+        <AiFillPhone
           size={24}
           className="text-neutral-700 absolute top-5 left-2"
         />

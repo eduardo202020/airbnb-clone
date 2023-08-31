@@ -36,19 +36,21 @@ const ListingInfo = ({
 }: Props) => {
   const { getByValue } = useCountries();
 
+  console.log({ locationValue }, { category });
+
   const coordinates = getByValue(locationValue)?.latlng;
 
   return (
     <div className="col-span-4 flex flex-col gap-8">
       <div className="flex flex-col gap-8">
         <div className="text-xl font-semibold flex flex-row items-center gap-2 ">
-          <div>Hosted by {user.name}</div>
+          <div>Publicado por {user.name}</div>
           <Avatar src={user.image} />
         </div>
         <div className="flex flex-row items-center gap-4 font-light text-neutral-500 ">
-          <div>{guestCount} guests</div>
+          {/* <div>{guestCount} guests</div>
           <div>{roomCount} rooms</div>
-          <div>{bathroomCount} bathrooms</div>
+          <div>{bathroomCount} bathrooms</div> */}
         </div>
       </div>
       <hr />

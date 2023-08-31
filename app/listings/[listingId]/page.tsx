@@ -15,6 +15,7 @@ const page = async ({ params }: Props) => {
   const reservations = await getReservations(params);
   const listing = await getListingById(params);
   const currentUser = await getCurrentUser();
+  console.log({ params }, { currentUser });
 
   if (!listing) {
     return <EmptyState />;
