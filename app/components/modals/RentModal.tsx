@@ -236,17 +236,16 @@ const RentModal = (props: Props) => {
       },
       onClose: () => {
         console.log("Handle the closing of the modal");
-        console.log({ globalThis });
-        // globalThis.Culqi.onclose();
+        // console.log({ globalThis });
       },
       onToken: (token) => {
         console.log("Send your token to the backend", token);
-        // handleSubmit(onSubmit);
-        // router.push("/");
-
-        // globalThis.Culqi.
-
-        // Culqi.close();
+        handleSubmit(onSubmit);
+        // router.refresh();
+        toast.success("Pagado");
+        // cerramos el modal
+        //@ts-ignore
+        window.Culqi.close();
       },
       onError: (error) => {
         console.log("handle the errors", error);
